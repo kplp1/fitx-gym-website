@@ -1,0 +1,27 @@
+/* Animations and Transitions for FitX Gym */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.slide-up.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes counter {
+  0% { content: 0; }
+  100% { content: var(--count); }
+}
+
+/* ...more animation classes for hover, loading, parallax, etc. will be added in next steps... */
