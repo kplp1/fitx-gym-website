@@ -57,7 +57,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="https://forms.gle/61YcDpeLx5Vo4R1R9" target="_blank" class="btn btn-primary join-btn">Join Now</a>
+                    <a href="#" class="btn btn-primary join-btn" id="join-now-btn">Join Now</a>
                     <span class="nav-phone"><i class="fa fa-phone"></i> +977-1-XXXXXXX</span>
                     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
                         <span></span><span></span><span></span>
@@ -76,7 +76,7 @@
                 <div id="hero-quote" class="fade-in" data-aos="fade-up" data-aos-delay="120" style="font-size:1.2em;font-weight:500;color:#fff;margin-bottom:1.2em;text-shadow:0 2px 8px rgba(0,0,0,0.25);"></div>
                 -->
                 <div class="hero-ctas fade-in" data-aos="fade-up" data-aos-delay="200">
-                    <a href="https://forms.gle/61YcDpeLx5Vo4R1R9" target="_blank" class="btn btn-primary">Register Now</a>
+                    <a href="#" class="btn btn-primary" id="register-now-btn">Register Now</a>
                     <a href="#membership" class="btn btn-outline">View Membership Plans</a>
                 </div>
                 <div class="hero-stats">
@@ -513,7 +513,7 @@
             <div class="footer-col">
                 <h4>Follow Us</h4>
                 <p class="follow-text">Stay connected for fitness tips, updates, and special offers!</p>
-                <a href="https://forms.gle/61YcDpeLx5Vo4R1R9" target="_blank" class="btn btn-primary join-community">Join Our Community</a>
+                <a href="#" class="btn btn-primary join-community" id="join-community-btn">Join Us Now</a>
             </div>
         </div>
         <div class="footer-divider"></div>
@@ -530,6 +530,42 @@
                 <p>Please fill out our membership form to join FitX Gym. We'll contact you to complete your registration.</p>
                 <div class="membership-cta" style="margin-top: 20px;">
                     <a href="https://forms.gle/61YcDpeLx5Vo4R1R9" target="_blank" class="btn btn-primary">Membership Form</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Now Modal -->
+        <div class="modal" id="join-now-modal" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close" id="close-join-now-modal">&times;</button>
+                <h2>Join FitX Gym</h2>
+                <p>Ready to start your fitness journey? Fill out our registration form and become part of the FitX family today!</p>
+                <div class="membership-cta" style="margin-top: 20px;">
+                    <a href="https://forms.gle/61YcDpeLx5Vo4R1R9" target="_blank" class="btn btn-primary">Registration Form</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Now Modal -->
+        <div class="modal" id="register-now-modal" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close" id="close-register-now-modal">&times;</button>
+                <h2>Register at FitX Gym</h2>
+                <p>Take the first step towards your fitness goals! Complete our registration form to get started with your personalized fitness journey.</p>
+                <div class="membership-cta" style="margin-top: 20px;">
+                    <a href="https://forms.gle/61YcDpeLx5Vo4R1R9" target="_blank" class="btn btn-primary">Registration Form</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Community Modal -->
+        <div class="modal" id="join-community-modal" aria-modal="true" role="dialog" tabindex="-1" style="display:none;">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close" id="close-join-community-modal">&times;</button>
+                <h2>Join Our Community</h2>
+                <p>Become part of the FitX family! Connect with fellow fitness enthusiasts, get exclusive updates, and access special community benefits.</p>
+                <div class="membership-cta" style="margin-top: 20px;">
+                    <a href="https://forms.gle/61YcDpeLx5Vo4R1R9" target="_blank" class="btn btn-primary">Community Form</a>
                 </div>
             </div>
         </div>

@@ -99,6 +99,107 @@ if (choosePlanBtns.length > 0 && membershipModal && closeMembershipModal) {
     });
 }
 
+  // Join Now Modal
+  const joinNowBtn = document.getElementById('join-now-btn');
+  const joinNowModal = document.getElementById('join-now-modal');
+  const closeJoinNowModal = document.getElementById('close-join-now-modal');
+
+  if (joinNowBtn && joinNowModal && closeJoinNowModal) {
+    joinNowBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      joinNowModal.style.display = 'flex';
+      joinNowModal.focus();
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeJoinNowModal.addEventListener('click', () => {
+      joinNowModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    joinNowModal.addEventListener('click', (e) => {
+      if (e.target === joinNowModal) {
+        joinNowModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
+
+  // Register Now Modal
+  const registerNowBtn = document.getElementById('register-now-btn');
+  const registerNowModal = document.getElementById('register-now-modal');
+  const closeRegisterNowModal = document.getElementById('close-register-now-modal');
+
+  if (registerNowBtn && registerNowModal && closeRegisterNowModal) {
+    registerNowBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      registerNowModal.style.display = 'flex';
+      registerNowModal.focus();
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeRegisterNowModal.addEventListener('click', () => {
+      registerNowModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    registerNowModal.addEventListener('click', (e) => {
+      if (e.target === registerNowModal) {
+        registerNowModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
+
+  // Join Community Modal
+  const joinCommunityBtn = document.getElementById('join-community-btn');
+  const joinCommunityModal = document.getElementById('join-community-modal');
+  const closeJoinCommunityModal = document.getElementById('close-join-community-modal');
+
+  if (joinCommunityBtn && joinCommunityModal && closeJoinCommunityModal) {
+    joinCommunityBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      joinCommunityModal.style.display = 'flex';
+      joinCommunityModal.focus();
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeJoinCommunityModal.addEventListener('click', () => {
+      joinCommunityModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    joinCommunityModal.addEventListener('click', (e) => {
+      if (e.target === joinCommunityModal) {
+        joinCommunityModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
+
+  // Enhanced Escape key handling for all modals
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      // Close any open modal
+      if (membershipModal && membershipModal.style.display === 'flex') {
+        membershipModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      if (joinNowModal && joinNowModal.style.display === 'flex') {
+        joinNowModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      if (registerNowModal && registerNowModal.style.display === 'flex') {
+        registerNowModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      if (joinCommunityModal && joinCommunityModal.style.display === 'flex') {
+        joinCommunityModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+  });
+
   // Membership Plan Tabs
   const planTabs = document.querySelectorAll('.plan-tab');
   const gymOnlyContent = `
