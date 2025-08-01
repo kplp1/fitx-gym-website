@@ -86,10 +86,13 @@ a:hover {
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.85);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.95) 50%, rgba(15, 23, 42, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: background var(--transition);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: all var(--transition);
 }
 .nav-container {
   display: flex;
@@ -133,6 +136,8 @@ a:hover {
 }
 .join-btn {
   margin-right: 1em;
+  padding: 0.5em 1.2em; /* Smaller padding than default .btn */
+  font-size: 0.9em; /* Slightly smaller font size */
 }
 .nav-phone {
   color: var(--secondary-white);
@@ -983,7 +988,7 @@ input.error, textarea.error, select.error {
 #back-to-top {
   position: fixed;
   right: 2em;
-  bottom: 2em;
+  bottom: 5em; /* Moved up to make room for WhatsApp button below */
   background: var(--primary-red);
   color: var(--secondary-white);
   border: none;
@@ -1010,7 +1015,7 @@ input.error, textarea.error, select.error {
 #whatsapp-float {
   position: fixed;
   right: 2em;
-  bottom: 5em; /* Position just above the back-to-top button */
+  bottom: 2em; /* Now at the bottom position */
   background: #25D366; /* WhatsApp green */
   color: white;
   border: none;
