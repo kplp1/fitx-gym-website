@@ -1006,6 +1006,53 @@ input.error, textarea.error, select.error {
   box-shadow: 0 6px 15px rgba(220,38,38,0.3);
 }
 
+/* WhatsApp Floating Button */
+#whatsapp-float {
+  position: fixed;
+  right: 2em;
+  bottom: 5em; /* Position just above the back-to-top button */
+  background: #25D366; /* WhatsApp green */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px; /* Same as back-to-top button */
+  height: 50px; /* Same as back-to-top button */
+  font-size: 1.5em; /* Same as back-to-top button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+#whatsapp-float:hover {
+  background: #128C7E; /* Darker WhatsApp green */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+#whatsapp-float i {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* Utility Classes */
 .fade-in, .slide-up {
   opacity: 0;
