@@ -16,21 +16,35 @@ document.addEventListener('DOMContentLoaded', function() {
   // Animated counters in hero
   const counters = document.querySelectorAll('.stat-number');
   counters.forEach(counter => {
+    const target = +counter.getAttribute('data-count');
+    let count = 0;
+
     const updateCount = () => {
-      const target = +counter.getAttribute('data-count');
-      const speed = 30;
-      let count = +counter.innerText;
-      if(count < target) {
-        counter.innerText = Math.ceil(count + (target - count) / speed);
-        setTimeout(updateCount, 20);
+      if(target <= 20) {
+        // For small numbers like 10, count one by one slowly
+        if(count < target) {
+          count++;
+          counter.innerText = count;
+          setTimeout(updateCount, 200); // 200ms delay between each number
+        }
       } else {
-        counter.innerText = target;
+        // For larger numbers like 500, use the faster animation
+        const speed = 30;
+        let currentCount = +counter.innerText;
+        if(currentCount < target) {
+          counter.innerText = Math.ceil(currentCount + (target - currentCount) / speed);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
       }
     };
+
     if(counter) {
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if(entry.isIntersecting) {
+            counter.innerText = '0'; // Start from 0
             updateCount();
             observer.disconnect();
           }
